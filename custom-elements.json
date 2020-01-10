@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "kemet-drawer",
+      "description": "A component that adds an off-canvas menu with different effects.",
+      "properties": [
+        {
+          "name": "effect",
+          "type": "String",
+          "reflect": true,
+          "description": "The animation effect for opening and closing the drawer. Values include: (slide|reveal|push|scale|door)",
+          "default": "slide"
+        },
+        {
+          "name": "opened",
+          "type": "Boolean",
+          "reflect": true,
+          "description": "Determines if the drawer is opened or not.",
+          "default": false
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "navigation",
+          "description": "The off canvas navigation."
+        },
+        {
+          "name": "content",
+          "description": "The main page content area."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--kemet-drawer-width",
+          "description": "The width of the drawer. Default is 300px.",
+          "type": "Length",
+          "default": "300px"
+        },
+        {
+          "name": "--kemet-drawer-height",
+          "description": "The height of the drawer. Deafult is 100%.",
+          "type": "Length",
+          "default": "100%"
+        },
+        {
+          "name": "--kemet-drawer-color",
+          "description": "The text color of the drawer. Default is #fafafa.",
+          "type": "Color",
+          "default": "#fafafa"
+        },
+        {
+          "name": "--kemet-drawer-background",
+          "description": "The background color of the drawer. Default is #202020.",
+          "type": "Color",
+          "default": "#202020"
+        }
+      ]
+    }
+  ]
+}

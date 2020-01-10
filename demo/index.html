@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root {
+      --rich-white: #fafafa;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--rich-white);
+    }
+
+    a {
+      display: inline-block;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    ul {
+      color: var(--rich-white);
+    }
+  </style>
+</head>
+<body>
+  <kemet-drawer effect="push">
+    <nav slot="navigation">
+      <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    </nav>
+    <section slot="content">
+      <a id="toggle">Toggle Drawer</a>
+    </section>
+  </kemet-drawer>
+
+  <script type="module" src="../kemet-drawer.js"></script>
+  <script>
+    const drawer = document.querySelector('kemet-drawer');
+    const link = document.getElementById('toggle');
+
+    link.addEventListener('click', () => {
+      drawer.toggle();
+    });
+  </script>
+</body>
+</html>
