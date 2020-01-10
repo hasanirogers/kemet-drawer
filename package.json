@@ -1,8 +1,8 @@
 {
-  "name": "kemet-drawer",
+  "name": "@kemet/kemet-drawer",
   "version": "1.0.0",
-  "description": "A component that adds and off-canvas drawer to the document.",
-  "author": "kemet-drawer",
+  "description": "A component that adds an off-canvas drawer to the document.",
+  "author": "Hasani Rogers <hasani.rogers@gmail.com>",
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
@@ -57,5 +57,16 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasanirogers/kemet-drawer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hasanirogers/kemet-drawer/issues"
+  },
+  "homepage": "https://github.com/hasanirogers/kemet-drawer#readme"
 }
