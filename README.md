@@ -1,19 +1,24 @@
 # \<kemet-drawer>
 
-This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
-
 ## Installation
 ```bash
-npm i kemet-drawer
+npm i @kemet/kemet-drawer
 ```
 
 ## Usage
-```html
-<script type="module">
-  import 'kemet-drawer/kemet-drawer.js';
-</script>
+```js
+import '@kemet/kemet-drawer/kemet-drawer.js';;
+```
 
-<kemet-drawer></kemet-drawer>
+```html
+<kemet-drawer effect="slide">
+  <nav slot="navigation">
+    [YOUR NAV HERE]
+  </nav>
+  <section slot="content">
+    [YOUR CONTENT HERE]
+  </section>
+</kemet-drawer>
 ```
 
 ## Linting with ESLint, Prettier, and Types
