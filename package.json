@@ -1,6 +1,6 @@
 {
   "name": "@kemet/kemet-drawer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A component that adds an off-canvas drawer to the document.",
   "author": "Hasani Rogers <hasani.rogers@gmail.com>",
   "license": "MIT",
@@ -27,17 +27,17 @@
     "lit-html": "^1.1.2"
   },
   "devDependencies": {
-    "es-dev-server": "^1.23.0",
-    "eslint": "^6.1.0",
+    "@open-wc/demoing-storybook": "^1.0.1",
     "@open-wc/eslint-config": "^2.0.0",
     "@open-wc/prettier-config": "^0.1.10",
-    "husky": "^1.0.0",
-    "lint-staged": "^8.0.0",
-    "@open-wc/testing-karma": "^3.0.0",
-    "deepmerge": "^3.2.0",
-    "@open-wc/testing-karma-bs": "^1.0.0",
     "@open-wc/testing": "^2.0.0",
-    "@open-wc/demoing-storybook": "^1.0.1"
+    "@open-wc/testing-karma": "^3.0.0",
+    "@open-wc/testing-karma-bs": "^1.3.89",
+    "deepmerge": "^3.2.0",
+    "es-dev-server": "^1.23.0",
+    "eslint": "^6.1.0",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0"
   },
   "eslintConfig": {
     "extends": [

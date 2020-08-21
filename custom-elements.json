@@ -18,6 +18,13 @@
           "reflect": true,
           "description": "Determines if the drawer is opened or not.",
           "default": false
+        },
+        {
+          "name": "side",
+          "type": "String",
+          "reflect": true,
+          "description": "Allows you to control which side the drawer opens from. Values include: (left|right)",
+          "default": "left"
         }
       ],
       "events": [],

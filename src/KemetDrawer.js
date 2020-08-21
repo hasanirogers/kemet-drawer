@@ -4,14 +4,18 @@ import { stylesBase, stylesEffects } from './styles.js';
 export class KemetDrawer extends LitElement {
   static get properties() {
     return {
-      'opened': {
+      opened: {
         type: Boolean,
         reflect: true,
       },
-      'effect': {
+      effect: {
         type: String,
         reflect: true,
-      }
+      },
+      side: {
+        type: String,
+        reflect: true,
+      },
     };
   }
 
@@ -21,12 +25,10 @@ export class KemetDrawer extends LitElement {
     // property defaults
     this.opened = false;
     this.effect = 'slide';
+    this.side = 'left';
   }
 
-  static styles = [
-    stylesBase,
-    stylesEffects,
-  ];
+  static styles = [stylesBase, stylesEffects];
 
   render() {
     return html`
@@ -46,7 +48,7 @@ export class KemetDrawer extends LitElement {
   }
 
   firstUpdated() {
-    this.addEventListener('click', (event) => {
+    this.addEventListener('click', event => {
       if (this.opened && event.target.tagName.toLowerCase() === 'kemet-drawer') {
         this.opened = false;
       }
