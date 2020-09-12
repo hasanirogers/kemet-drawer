@@ -50,20 +50,44 @@ export class KemetDrawer extends LitElement {
   firstUpdated() {
     this.addEventListener('click', event => {
       if (this.opened && event.target.tagName.toLowerCase() === 'kemet-drawer') {
-        this.opened = false;
+        this.close();
       }
     });
   }
 
   open() {
     this.opened = true;
+
+    this.dispatchEvent(
+      new CustomEvent('kemet-drawer-open', {
+        bubbles: true,
+        composed: true,
+        detail: this,
+      }),
+    );
   }
 
   close() {
     this.opened = false;
+
+    this.dispatchEvent(
+      new CustomEvent('kemet-drawer-close', {
+        bubbles: true,
+        composed: true,
+        detail: this,
+      }),
+    );
   }
 
   toggle() {
     this.opened = !this.opened;
+
+    this.dispatchEvent(
+      new CustomEvent('kemet-drawer-toggle', {
+        bubbles: true,
+        composed: true,
+        detail: this,
+      }),
+    );
   }
 }

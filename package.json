@@ -1,6 +1,6 @@
 {
   "name": "@kemet/kemet-drawer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A component that adds an off-canvas drawer to the document.",
   "author": "Hasani Rogers <hasani.rogers@gmail.com>",
   "license": "MIT",
@@ -68,5 +68,5 @@
   "bugs": {
     "url": "https://github.com/hasanirogers/kemet-drawer/issues"
   },
-  "homepage": "https://github.com/hasanirogers/kemet-drawer#readme"
+  "homepage": "http://kemet.online/drawer"
 }
