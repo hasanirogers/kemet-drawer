@@ -19,16 +19,23 @@
     }
 
     article {
+      max-width: 1024px;
+      margin: auto;
       padding: 1rem 2rem;
     }
 
     ul {
       color: var(--rich-white);
     }
+
+    kemet-drawer[side="top"],
+    kemet-drawer[side="bottom"] {
+      --kemet-drawer-height: 300px;
+    }
   </style>
 </head>
 <body>
-  <kemet-drawer effect="scale" side="right">
+  <kemet-drawer effect="push" side="top">
     <nav slot="navigation">
       <ul>
         <li>Link 1</li>
