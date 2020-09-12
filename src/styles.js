@@ -1,4 +1,6 @@
-import { css } from 'lit-element';
+import { css, unsafeCSS } from 'lit-element';
+
+const documentHeight = `${document.documentElement.scrollHeight}px`;
 
 export const stylesBase = css`
   :host {
@@ -127,11 +129,15 @@ export const stylesEffects = css`
   :host([effect='slide'][side='bottom']) .off-canvas__nav {
     width: 100vw;
     height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
   }
 
   :host([effect='slide'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
+    transform: translate3d(
+      0,
+      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
+      0
+    );
   }
 
   /* reveal */
@@ -181,11 +187,15 @@ export const stylesEffects = css`
   :host([effect='reveal'][side='bottom']) .off-canvas__nav {
     width: 100vw;
     height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
+    transform: translate3d(
+      0,
+      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
+      0
+    );
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__pusher {
@@ -240,11 +250,15 @@ export const stylesEffects = css`
   :host([effect='push'][side='bottom']) .off-canvas__nav {
     width: 100vw;
     height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
+    transform: translate3d(
+      0,
+      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
+      0
+    );
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__pusher {
@@ -300,11 +314,15 @@ export const stylesEffects = css`
   :host([effect='scale'][side='bottom']) .off-canvas__nav {
     width: 100vw;
     height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
   }
 
   :host([effect='scale'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
+    transform: translate3d(
+      0,
+      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
+      0
+    );
   }
 
   /* door */
@@ -366,11 +384,15 @@ export const stylesEffects = css`
   :host([effect='door'][side='bottom']) .off-canvas__nav {
     width: 100vw;
     height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, 100vh, 0);
+    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
   }
 
   :host([effect='door'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
+    transform: translate3d(
+      0,
+      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
+      0
+    );
   }
 
   :host([effect='door'][side='bottom'][opened]) .off-canvas__pusher {
