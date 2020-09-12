@@ -116,8 +116,8 @@ export const stylesEffects = css`
 
   :host([effect='slide'][side='top']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    height: var(--kemet-drawer-height, 100vh);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   :host([effect='slide'][side='top'][opened]) .off-canvas__nav {
@@ -126,12 +126,12 @@ export const stylesEffects = css`
 
   :host([effect='slide'][side='bottom']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
+    height: var(--kemet-drawer-height, 100vh);
     transform: translate3d(0, 100vh, 0);
   }
 
   :host([effect='slide'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100%)), 0);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   /* reveal */
@@ -166,8 +166,8 @@ export const stylesEffects = css`
 
   :host([effect='reveal'][side='top']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    height: var(--kemet-drawer-height, 100vh);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   :host([effect='reveal'][side='top'][opened]) .off-canvas__nav {
@@ -175,21 +175,21 @@ export const stylesEffects = css`
   }
 
   :host([effect='reveal'][side='top'][opened]) .off-canvas__pusher {
-    transform: translate3d(0, var(--kemet-drawer-height, 100%), 0);
+    transform: translate3d(0, var(--kemet-drawer-height, 100vh), 0);
   }
 
   :host([effect='reveal'][side='bottom']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
+    height: var(--kemet-drawer-height, 100vh);
     transform: translate3d(0, 100vh, 0);
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100%)), 0);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__pusher {
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   /* push */
@@ -225,8 +225,8 @@ export const stylesEffects = css`
 
   :host([effect='push'][side='top']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    height: var(--kemet-drawer-height, 100vh);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   :host([effect='push'][side='top'][opened]) .off-canvas__nav {
@@ -234,21 +234,21 @@ export const stylesEffects = css`
   }
 
   :host([effect='push'][side='top'][opened]) .off-canvas__pusher {
-    transform: translate3d(0, var(--kemet-drawer-height, 100%), 0);
+    transform: translate3d(0, var(--kemet-drawer-height, 100vh), 0);
   }
 
   :host([effect='push'][side='bottom']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
+    height: var(--kemet-drawer-height, 100vh);
     transform: translate3d(0, 100vh, 0);
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100%)), 0);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__pusher {
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   /* scale */
@@ -289,8 +289,8 @@ export const stylesEffects = css`
 
   :host([effect='scale'][side='top']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    height: var(--kemet-drawer-height, 100vh);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   :host([effect='scale'][side='top'][opened]) .off-canvas__nav {
@@ -299,12 +299,12 @@ export const stylesEffects = css`
 
   :host([effect='scale'][side='bottom']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
+    height: var(--kemet-drawer-height, 100vh);
     transform: translate3d(0, 100vh, 0);
   }
 
   :host([effect='scale'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100%)), 0);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   /* door */
@@ -351,8 +351,8 @@ export const stylesEffects = css`
 
   :host([effect='door'][side='top']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100%) * -1), 0);
+    height: var(--kemet-drawer-height, 100vh);
+    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
   }
 
   :host([effect='door'][side='top'][opened]) .off-canvas__nav {
@@ -365,12 +365,12 @@ export const stylesEffects = css`
 
   :host([effect='door'][side='bottom']) .off-canvas__nav {
     width: 100vw;
-    height: var(--kemet-drawer-height, 100%);
+    height: var(--kemet-drawer-height, 100vh);
     transform: translate3d(0, 100vh, 0);
   }
 
   :host([effect='door'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100%)), 0);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   :host([effect='door'][side='bottom'][opened]) .off-canvas__pusher {
