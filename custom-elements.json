@@ -9,7 +9,7 @@
           "name": "effect",
           "type": "String",
           "reflect": true,
-          "description": "The animation effect for opening and closing the drawer. Values include: (slide|reveal|push|scale|door)",
+          "description": "The animation effect for opening and closing the drawer. Values include: (slide|reveal|push|scale)",
           "default": "slide"
         },
         {

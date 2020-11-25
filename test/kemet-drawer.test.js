@@ -13,16 +13,16 @@ describe('KemetDrawer', () => {
   });
 
   it('opens the drawer when toggled', async () => {
-    const toggle = (event) => {
+    const toggle = event => {
       const drawer = event.target.closest('kemet-drawer');
       // drawer.opened = !drawer.opened;
       drawer.toggle();
-    }
+    };
 
     const element = await fixture(html`
       <kemet-drawer>
         <div slot="content">
-          <button @click=${(event) => toggle(event)}></button>
+          <button @click=${event => toggle(event)}></button>
         </div>
       </kemet-drawer>
     `);
@@ -32,15 +32,15 @@ describe('KemetDrawer', () => {
   });
 
   it('opens the drawer when open is called', async () => {
-    const open = (event) => {
+    const open = event => {
       const drawer = event.target.closest('kemet-drawer');
       drawer.open();
-    }
+    };
 
     const element = await fixture(html`
       <kemet-drawer>
         <div slot="content">
-          <button @click=${(event) => open(event)}></button>
+          <button @click=${event => open(event)}></button>
         </div>
       </kemet-drawer>
     `);
@@ -50,15 +50,15 @@ describe('KemetDrawer', () => {
   });
 
   it('closes the drawer when close is called', async () => {
-    const close = (event) => {
+    const close = event => {
       const drawer = event.target.closest('kemet-drawer');
       drawer.close();
-    }
+    };
 
     const element = await fixture(html`
       <kemet-drawer>
         <div slot="content">
-          <button @click=${(event) => close(event)}></button>
+          <button @click=${event => close(event)}></button>
         </div>
       </kemet-drawer>
     `);
@@ -82,10 +82,10 @@ describe('KemetDrawer', () => {
 
   it('can override the effect via attribute', async () => {
     const element = await fixture(html`
-      <kemet-drawer effect="door"></kemet-drawer>
+      <kemet-drawer effect="slide"></kemet-drawer>
     `);
 
-    expect(element.effect).to.equal('door');
+    expect(element.effect).to.equal('slide');
   });
 
   it('passes the a11y audit', async () => {
