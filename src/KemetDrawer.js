@@ -2,6 +2,10 @@ import { LitElement, html } from 'lit-element';
 import { stylesBase, stylesEffects } from './styles.js';
 
 export class KemetDrawer extends LitElement {
+  static get styles() {
+    return [stylesBase, stylesEffects];
+  }
+
   static get properties() {
     return {
       opened: {
@@ -28,7 +32,7 @@ export class KemetDrawer extends LitElement {
     this.side = 'left';
   }
 
-  static styles = [stylesBase, stylesEffects];
+  // static styles = [stylesBase, stylesEffects];
 
   render() {
     return html`

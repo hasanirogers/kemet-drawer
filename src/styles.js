@@ -13,7 +13,7 @@ export const stylesBase = css`
   }
 
   .off-canvas__nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -46,7 +46,6 @@ export const stylesBase = css`
     left: 0;
     z-index: 99;
     height: 100%;
-    perspective: 1000px;
     transition: transform 0.5s;
   }
 
@@ -133,11 +132,7 @@ export const stylesEffects = css`
   }
 
   :host([effect='slide'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(
-      0,
-      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
-      0
-    );
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   /* reveal */
@@ -191,11 +186,7 @@ export const stylesEffects = css`
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(
-      0,
-      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
-      0
-    );
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   :host([effect='reveal'][side='bottom'][opened]) .off-canvas__pusher {
@@ -254,11 +245,7 @@ export const stylesEffects = css`
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(
-      0,
-      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
-      0
-    );
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 
   :host([effect='push'][side='bottom'][opened]) .off-canvas__pusher {
@@ -266,16 +253,12 @@ export const stylesEffects = css`
   }
 
   /* scale */
-  :host([effect='scale']) .off-canvas {
-    perspective: 1500px;
-  }
-
   :host([effect='scale']) .off-canvas__pusher {
     transform-style: preserve-3d;
   }
 
   :host([effect='scale'][opened]) .off-canvas__pusher {
-    transform: translate3d(0, 0, -300px);
+    transform: translate3d(0, 0, 0) scale(0.95);
   }
 
   :host([effect='scale']) .off-canvas__nav {
@@ -318,84 +301,6 @@ export const stylesEffects = css`
   }
 
   :host([effect='scale'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(
-      0,
-      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
-      0
-    );
-  }
-
-  /* door */
-  :host([effect='door']) .off-canvas {
-    perspective: 1500px;
-  }
-
-  :host([effect='door']) .off-canvas__pusher {
-    transform-origin: 100% 50%;
-    transform-style: preserve-3d;
-  }
-
-  :host([effect='door'][opened]) .off-canvas__pusher {
-    transform: rotateY(-10deg);
-  }
-
-  :host([effect='door']) .off-canvas__nav {
-    opacity: 1;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  :host([effect='door'][opened]) .off-canvas__nav {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(0, 0, 0);
-  }
-
-  :host([effect='door']) .off-canvas__nav::after {
-    display: none;
-  }
-
-  :host([effect='door'][side='right'][opened]) .off-canvas__pusher {
-    transform: rotateY(10deg);
-  }
-
-  :host([effect='door'][side='right']) .off-canvas__nav {
-    opacity: 1;
-    transform: translate3d(100vw, 0, 0);
-  }
-
-  :host([effect='door'][side='right'][opened]) .off-canvas__nav {
-    transform: translate3d(calc(100vw - var(--kemet-drawer-width, 300px)), 0, 0);
-  }
-
-  :host([effect='door'][side='top']) .off-canvas__nav {
-    width: 100vw;
-    height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, calc(var(--kemet-drawer-height, 100vh) * -1), 0);
-  }
-
-  :host([effect='door'][side='top'][opened]) .off-canvas__nav {
-    transform: translate3d(0, 0, 0);
-  }
-
-  :host([effect='door'][side='top'][opened]) .off-canvas__pusher {
-    transform: rotateX(10deg);
-  }
-
-  :host([effect='door'][side='bottom']) .off-canvas__nav {
-    width: 100vw;
-    height: var(--kemet-drawer-height, 100vh);
-    transform: translate3d(0, ${unsafeCSS(documentHeight)}, 0);
-  }
-
-  :host([effect='door'][side='bottom'][opened]) .off-canvas__nav {
-    transform: translate3d(
-      0,
-      calc(${unsafeCSS(documentHeight)} - var(--kemet-drawer-height, 100vh)),
-      0
-    );
-  }
-
-  :host([effect='door'][side='bottom'][opened]) .off-canvas__pusher {
-    transform: rotateX(-10deg);
+    transform: translate3d(0, calc(100vh - var(--kemet-drawer-height, 100vh)), 0);
   }
 `;
