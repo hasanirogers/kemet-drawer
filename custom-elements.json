@@ -35,10 +35,6 @@
         {
           "name": "kemet-drawer-close",
           "description": "Fires when the drawer closes."
-        },
-        {
-          "name": "kemet-drawer-toggle",
-          "description": "Fires when the drawer toggles."
         }
       ],
       "slots": [

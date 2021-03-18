@@ -27,12 +27,10 @@ export class KemetDrawer extends LitElement {
     super();
 
     // property defaults
-    this.opened = false;
+    this.opened = undefined;
     this.effect = 'slide';
     this.side = 'left';
   }
-
-  // static styles = [stylesBase, stylesEffects];
 
   render() {
     return html`
@@ -59,35 +57,31 @@ export class KemetDrawer extends LitElement {
     });
   }
 
+  updated() {
+    if (this.opened === true) {
+      this.makeEvent('open');
+    }
+
+    if (this.opened === false) {
+      this.makeEvent('close');
+    }
+  }
+
   open() {
     this.opened = true;
-
-    this.dispatchEvent(
-      new CustomEvent('kemet-drawer-open', {
-        bubbles: true,
-        composed: true,
-        detail: this,
-      }),
-    );
   }
 
   close() {
     this.opened = false;
-
-    this.dispatchEvent(
-      new CustomEvent('kemet-drawer-close', {
-        bubbles: true,
-        composed: true,
-        detail: this,
-      }),
-    );
   }
 
   toggle() {
     this.opened = !this.opened;
+  }
 
+  makeEvent(type) {
     this.dispatchEvent(
-      new CustomEvent('kemet-drawer-toggle', {
+      new CustomEvent(`kemet-drawer-${type}`, {
         bubbles: true,
         composed: true,
         detail: this,
